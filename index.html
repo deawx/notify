@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notify | Digitalify</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body style=" text-align: center;">
+
+    <footer style="position: absolute;bottom: 15px; width: 100%; left: 0;">
+        Made with &#9825; by <a href="http://digitalify.github.io">Digitalify</a>
+    </footer>
+
+    <script src="assets/jquery.js"></script>
+    <script src="jquery.notify.js"></script>
+    <script>
+        $.notify({
+            position: 8,
+            type: 'info',
+            autoClose: false,
+            message: "Don't forget to hit the star button on Github ;)"
+        });
+
+        $.notify({
+            position: 8,
+            type: 'warn',
+            autoClose: false,
+            message: "test"
+        });
+
+        $.notify({
+            position: 8,
+            duration: 8000000
+        });
+    </script>
+</body>
+
+</html>
