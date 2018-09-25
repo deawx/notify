@@ -1,79 +1,41 @@
-# Checkify
-A light-weight, mobile-ready and customizable form validation plugin for jQuery, inspired by [Validetta](https://github.com/hsnaydd/validetta)
+# Notify
+A light-weight yet customizable toast plugin for jQuery
 
 ## Usage
 
-Include `checkify.js` and `checkify.css` to your page
+Include `jquery.notify.js` and `jquery.notify.css` and of course `jquery` to your page
 
 ```
 <link rel="stylesheet" href="checkify.css" />
 
-<!-- checkify is depends on jQuery -->
 <script src="jquery.js"></script>
 <script src="checkify.js"></script>
-```
-
-__HTML__
-
-```html
-<!-- can be any html element, refer to container option -->
-<form id="my-form">            
-    <input type="text" data-checkify="minlen=10,required,number" />            
-    <button>click me</button>
-</form>
 ```
 
 __JS__
 
 ```js
-$('#my-form').checkify({
-    // options
-    onError: function () {
-    	console.log('error');
-    },
-    onValid: function () {
-    	console.log('valid');
-    }
-});
+$.notify();
 ```
 
 ## Available options
 
 ```js
-message: {    
-    inactive: false,
-    // if true. error message won't be shown for required cases
-    inactiveForRequired: true,
-    // horizontal gap for error message box
-    hGap: null,
-    // vertical gap for error message box
-    vGap: null,
-    // can be right or left
-    position: 'left',
-    required: 'This field is required.',
-    email: 'Invalid data.',
-    regex: 'Invalid data.',
-    number: 'Invalid data, only numbers allowed.',
-    maxlen: 'Maximum {count} characters allowed.',
-    minlen: 'Minimum {count} characters allowed.',
-    maxChecked: 'Maximum {count} options allowed.',
-    minChecked: 'Please select at least {count} options.',
-    maxSelected: 'Maximum {count} selection allowed.',
-    minSelected: 'Minimum {count} selection allowed.',
-    notEqual: 'Fields do not match.',
-    different: 'Fields cannot be the same as each other'
-},
-realTime: false,
-// css selector or jQuery object, checkify will search for elements inside this
-container: null,
-// css selector, this will be used as trigger checkify
-trigger: null,
-// callback, can be function  
-onValid: null,
-// callback, can be function
-onError: null
+wrapper: 'body',
+message: 'Your request submitted successfuly!',
+// success, info, error, warn
+type: 'success',
+// 1: top-left, 2: top-center, 3: top-right
+// 4: mid-left, 5: mid-right
+// 6: bottom-left, 7: bottom-center, 8: bottom-right
+position: 1,
+dir: 'ltr',
+autoClose: true,
+duration: 4000,
+onOpen: null,
+onClose: null
 ```
 
 ## License
 
-[MIT](https://github.com/dehghani-mehdi/checkify/blob/master/LICENSE)
+[MIT](https://github.com/digitalify/notify/blob/master/LICENSE)
