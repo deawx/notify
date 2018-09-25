@@ -6,10 +6,10 @@ A light-weight yet customizable toast plugin for jQuery
 Include `jquery.notify.js` and `jquery.notify.css` and of course `jquery` to your page
 
 ```
-<link rel="stylesheet" href="checkify.css" />
+<link rel="stylesheet" href="jquery.notify.css" />
 
 <script src="jquery.js"></script>
-<script src="checkify.js"></script>
+<script src="jquery.notify.js"></script>
 ```
 
 __JS__
